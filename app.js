@@ -18,7 +18,7 @@
     util.ajax({
         url: API_BASE_URL,
         data: {
-            slug: 'digg'
+            group: 'digg'
         },
         success: function (data) {
             console.log('Success!', data);
