@@ -6,14 +6,14 @@ A coding test for [Digg](https://digg.com) Frontend candidates.
 
 ## Welcome!
 
-We're looking to test your ability to build a single-page web application for Digg that should let you display your skills and give you some freedom to be creative. 
+The assignment is: build a single-page web application for Digg that demonstrates your technical skills as well as your creativity and product-focused thought process. 
 
-Please read this entire documentaion as it contains both the requirements for the assignment, as well as some hints to help you out.
+Please read this entire documentation as it contains both the requirements for the assignment, as well as some hints to help you out.
 
 
 ## The Basics
 
-Your job is to build a mini news-reading application for the web. The goal of this test is to get as much done as you can in 4 hours. Afterwards you should submit your code to us (a link to a Github repo containing the code is preferred).
+Your assignment is to build a mini news-reading application for the web. The goal of this test is to get as much done as you can in **4 hours**. We'll provide the data sources and some files to get you started; the rest is up to you. Once you're done, please submit your code to us by sending us the link to your Github repo containing the your webapp.
 
 
 ## Requirements
@@ -21,7 +21,7 @@ Your job is to build a mini news-reading application for the web. The goal of th
 * You're building a single-page webapp. There should be no full-page refreshes.
 * You must include at least the following two components: **Feed Menu View** and **Feed Content View**. Requirements for these two components are detailed below.
 * You must use core HTML, CSS, and JavaScript. Feel free to use any "HTML5" APIs, bleeding edge CSS, and HTML elements that are supported by modern browsers, but you should not use any 3rd-party JavaScript/CSS libraries or frameworks.
-* As mentioned above, the webapp should render and work properly in all modern browsers.
+* The webapp should render and work properly in all modern browsers.
 
 ### Feed Menu View
 
@@ -65,7 +65,7 @@ Included in this repo are some files to help you get started.
 
 ### The Feeds
 
-The four feeds to use in the application are as follows. These feeds are from an experimental data project that we’ve built at Digg. The stories in each feed below represent trending stories from various Twitter accounts: digg employees, editor’s picks, political reporters and people in the design profession/community.
+The four feeds to use in the application are as follows. These feeds are from an experimental data project that we built at Digg. The stories in each feed below represent trending stories from various Twitter accounts: digg employees, editor’s picks, political reporters and people in the design profession/community.
 These four feeds support JSONP callbacks. Also, the values of the 'screen_name' and 'sharers' fields for each story are Twitter usernames.
 
 ```
