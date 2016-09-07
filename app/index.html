@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran|Raleway:200" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="page-wrapper" data-selected='' data-mouse-event='' data-nav=''>
+  <div class="row main-nav">
+    <nav class="inner-container">
+      <ul class="list-outer">
+        <li>
+          <button class="nav-button" data-section='digg'>digg</button>
+          <ul id="menu-digg" class="list-inner"></ul>
+        </li>
+        <li>
+          <button class="nav-button" data-section='pick'>editor's pick</button>
+          <ul id="menu-pick" class="list-inner"></ul>
+        </li>
+        <li>
+          <button class="nav-button" data-section='politics'>politics</button>
+          <ul id="menu-politics" class="list-inner"></ul>
+        </li>
+        <li>
+          <button class="nav-button" data-section='design'>design</button>
+          <ul id="menu-design" class="list-inner"></ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <div class="row">
+      <div id="digg" class='inner-container feed-wrapper hero'></div>
+      <div id="pick" class='inner-container feed-wrapper two-by-two'></div>
+      <div id="politics" class='inner-container feed-wrapper two-by-two'></div>
+      <div id="design" class='inner-container feed-wrapper single'></div>
+    </div>
+  </main>
+</div>
+
+<script src='js/data.min.js'></script>
+<script src='js/main.min.js'></script>
+</body>
+</html>

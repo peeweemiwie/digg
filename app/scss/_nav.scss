@@ -1,0 +1,120 @@
+.main-nav {
+  background-color: rgba($white, .9);
+  left: 50%;
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 100;
+  &:after {
+    background-image: linear-gradient(
+      to bottom,
+      rgba($black, .2), rgba($black, 0)
+    );
+    content: '';
+    display: block;
+    height: .7rem;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+$accent-list: $accent-1 $accent-2 $accent-3 $accent-4;
+$i: 1;
+@each $color in $accent-list {
+.main-nav li:nth-of-type(#{$i}) button {
+    border-color: $color;
+    color: $color;
+    &.active:before,
+    &:hover:before{
+      @include radial($color, 50, 1s);
+    }
+  }
+  $i: $i + 1;
+}
+
+.main-nav button {
+  @extend .catamaran;
+  background-color: $white;
+  border-style: solid;
+  border-width: 1px 12px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2.5rem;
+  overflow: hidden;
+  padding: 1rem 0 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 1s;
+  width: 100%;
+  z-index: 5;
+  &:before {
+    @include radial(white, 1, .5s);
+  }
+  &.active,
+  &:hover {
+    color: white !important;
+    transition: color .5s;
+  }
+}
+
+.list-outer {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-outer > li {
+  float: left;
+  width: 25%;
+  @extend .clearfix;
+}
+
+.list-inner {
+  list-style: none;
+  margin: 1rem .5rem 0;
+  padding-left: 0;
+  position: absolute;
+  top: -35rem; // hidden by default
+  transform: perspective(500px) translateY(0);
+  transition: transform 1s;
+  width: 25%;
+}
+
+.list-inner > li {
+  background-color: $white;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center left;
+  border-bottom: 1px solid $gray;
+  margin: 0 auto;
+  padding: .5rem;
+  width: 94%;
+}
+
+.list-inner .context-wrapper {
+  color: $black;
+  display: inline-block;
+  font-family: arial, sans-serif;
+  margin-left: 28%;
+  position: relative;
+  right: 0;
+  width: 70%;
+}
+
+.list-inner p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.list-inner span {
+  color: $gray;
+}
+
+[data-nav='digg'] #menu-digg.list-inner,
+[data-nav='pick'] #menu-pick.list-inner,
+[data-nav='politics'] #menu-politics.list-inner,
+[data-nav='design'] #menu-design.list-inner {
+  transform: translateY(41rem);
+  transition: transform 1s;
+}

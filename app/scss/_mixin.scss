@@ -1,0 +1,68 @@
+$white: #fff;
+$black: #000;
+$gray: lighten($black, 50%);
+$yellow: #ff0;
+$red: #ed3939;
+$transparent: rgba(white, 0);
+$accent-base: #0085ff;
+$one-third: calc(100% / 3 - 2rem);
+
+$accent-1: #385b9f;
+$accent-2: #ed6639;
+$accent-3: #7f909a;
+$accent-4: #222;
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.catamaran {
+  font-family: 'Catamaran', sans-serif;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.section-dark {
+  background-color: rgba($black, .8);
+  bottom: 0;
+  color: $white;
+  padding: .5rem 1rem;
+  position: absolute;
+  width: 100%;
+}
+
+@mixin triangleLeft($triWidth, $triHeight, $left, $color){
+  background: $transparent;
+  border-right: $triWidth solid $color;
+  border-top: $triHeight solid $transparent;
+  border-bottom: $triHeight solid $transparent;
+  content: '';
+  display: block;
+  height: 0;
+  left: $left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+}
+
+@mixin radial($bgcolor, $scale, $duration) {
+  background-color: $bgcolor;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 10px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: scale($scale, $scale);
+  transition: background-color $duration, transform $duration;
+  width: 10px;
+  z-index: -1;
+}

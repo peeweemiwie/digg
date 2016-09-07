@@ -1,0 +1,76 @@
+html {
+  font-size:62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.row {
+  background-color: darken($white, 5%);
+  width: 100%;
+}
+
+.inner-container {
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 100%;
+}
+
+main section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1rem solid $white;
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+main section p,
+main section span {
+  @extend .raleway;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+main section p {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+main section span {
+  font-size: 1.2rem;
+}
+
+.context-wrapper{
+  position: relative;
+  text-decoration: none;
+}
+
+.feed-wrapper {
+  @extend .clearfix;
+  left: 100vw;
+  padding: 10rem 0;
+  position: absolute;
+  top: 0;
+  transform: perspective(500px) translateX(0);
+  transition: transform 1s;
+}
+
+[data-selected='digg'] #digg,
+[data-selected='pick'] #pick,
+[data-selected='politics'] #politics,
+[data-selected='design'] #design {
+  transform: translateX(-100vw);
+  transition: transform 1s;
+}
